@@ -38,14 +38,41 @@
 
     <div id="bulbBound">
         <div id="bulbObjects">
-            <div  id="rayo"></div>
-            <div id="luz"> </div>
-            <div id="bulb"> </div>
-            <div id="txt"></div>
-            <div id="linea1"></div>
-            <div id="linea2"></div>
-            <div id="linea3"></div>
-            <div id="linea4"></div>
+
+                <svg  version="1.1"  id="rayo" width="111.1901" height="19.341797" viewBox="0 0 111.1901 19.341797" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events">
+                  <svg transform="translate(25.745805,-722.59133)" >
+                  <svg d="M -23.300453,739.49191 -6.0993607,725.0102 11.875012,739.49191 29.849193,725.0102 47.823485,739.49191 65.797756,725.0102 82.998947,739.49191" class="svgStrokes" /> </g>
+                </svg>
+
+
+
+                <svg id="luz" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="277.6011" height="174.9828" >
+
+                  <g transform="translate(1,-872.39219)">
+                    <path d="M 140.95571,877.39219 140.95571,932.62426 z M 71.824448,901.34139 89.908288,943.21069 z M 210.087,901.34139 192.00317,943.21069 z M 22.598668,966.3848 47.738568,984.59142 z M 259.31277,966.3848 234.17289,984.59142 z M 44.567978,1050.032 2.1551778,1050.207 z M 237.34347,1050.032 279.75627,1050.207 z" class="svgStrokes" />
+                  </g>
+
+                </svg>
+
+                <div id="bulb">
+                    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="165" height="195" viewBox="0 0 165 195">
+                      <g transform="translate(2,-861.3622)" >
+                        <path d="M 103.63325,1015.4855 C 104.83532,981.16127 155.17321,966.68365 152.17329,927.66114 152.17329,892.90846 121.1926,864.62305 77.550253,864.62305 33.907903,864.62305 2.9272225,892.90846 2.9272225,927.66114 -0.07269747,966.68365 50.265183,981.16127 51.467263,1015.4855 Z" class="svgStrokes" id="lamparita" />
+                      </g>
+                    </svg>
+                </div>
+
+                <div id="txt"></div>
+
+                <div id="linea1"></div>
+                <div id="linea2"></div>
+                <div id="linea3"></div>
+                <div id="linea4"></div>
+
+
+
         </div>
     </div>
 

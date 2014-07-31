@@ -183,15 +183,16 @@ body {
   @include loc(auto,0,auto,0);
   @include size(60px,10px);
   margin: auto;
-  @include if-sprite(-550px,-300px);
+  @include if-sprite(-300px,-550px);
   animation-fill-mode: forwards !important;
   -webkit-animation-fill-mode: forwards !important;
 }
 
 #linea1 {
   @include size(30px,10px);
-  @include loc(auto,auto,-500px,auto);
-  @include if-sprite(-550px, -360px);
+  margin: auto;
+  @include loc(0,0,-500px,auto);
+  @include if-sprite(-360px, -550px);
   animation: $animationTime linea1;
   -webkit-animation: $animationTime linea1;
 }
@@ -214,13 +215,12 @@ body {
 
 #linea2 {
   bottom: -488px;
-  //12px;
   animation: $animationTime linea2;
   -webkit-animation: $animationTime linea2;
 }
 
 @-webkit-keyframes linea2 {
-  2% {
+  0%, 2% {
     bottom: -488px;
     opacity: 0;
   }
@@ -242,7 +242,7 @@ body {
 }
 
 @-webkit-keyframes linea3 {
-  4% {
+  0%, 4% {
     bottom: -476px;
     opacity: 0;
   }
@@ -251,6 +251,7 @@ body {
     opacity: 1;
   }
   40%,100% {
+    bottom: 24px;
     opacity: 1;
   }
 }
@@ -263,7 +264,7 @@ body {
 }
 
 @-webkit-keyframes linea4 {
-  6% {
+  0%, 6% {
     bottom: -464px;
     opacity: 0;
   }
@@ -279,16 +280,10 @@ body {
 
 
 #bulb {
-  bottom: -452px;
-  //48px;
-
-  position: absolute;
   @include if-sprite(-300px, -220px);
-  left: 0;
-  right: 0px;
+  @include loc(auto,0px, -452px, 0px);
+  @include size(160px,160px);
   margin: auto;
-  width: 160px;
-  height: 160px;
   animation-fill-mode: forwards !important;
   -webkit-animation-fill-mode: forwards !important;
   animation: $animationTime bulbUp;
@@ -296,44 +291,28 @@ body {
 
 }
 
-#lamparita {
-  fill: none;
-  cursor: pointer;
-  &:hover{
-    fill: $cAzul !important;
-  }
-}
 @-webkit-keyframes bulbUp {
-  8% {
+  0% , 8% {
     bottom: -452px;
     opacity: 0;
   }
   18% , 20% {
     bottom: 48px;
     opacity: 1;
-    stroke: $cGris;
   }
   40% , 100% {
     bottom: 48px;
     opacity: 1;
-    stroke: $cAzul;
   }
 }
 
 
 #rayo {
-    @include if-sprite(-300px, -120px);
-
-  bottom: 130px;
-  fill:none;
-  position: absolute;
-  left: 0;
-  right: 0px;
+  @include if-sprite(-300px, -120px);
+  @include loc(auto,0px,130px, 0px);
+  @include size(120px,30px);
   margin: auto;
-  width: 120px;
-  height: 30px;
   opacity: 0;
-  stroke-width: 6px;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation: $animationTime rayo;
@@ -341,34 +320,16 @@ body {
 }
 
 @-webkit-keyframes rayo {
-  0%  ,15% {
-    opacity: 0;
-    stroke: $cNegro;
-  }
-  20% {
-    opacity: 1;
-    stroke: $cGris;
-  }
-  40%,    42%,    44% {
-    opacity: 1;
-    stroke: $cAzul;
-  }
-  41%,    43%     ,100% {
-    opacity: 0;
-    stroke: $cGris;
-  }
+  0%  ,15% {opacity: 0; }
+  20% { opacity: 1; }
+  40%,    42%,    44% {opacity: 1; }
+  41%,    43%     ,100% { opacity: 0;  }
 }
 
 
 #luz {
-  bottom: 110px;
-  //130px;
-  position: absolute;
-  left: -70px;
-  right: 0px;
-  margin: auto;
-  width: 300px;
-  height: 200px;
+  @include loc(auto,0px,110px, -70px);
+  @include size(300px,200px);
   @include if-sprite(-0px, -220px);
   opacity: 1;
   animation-fill-mode: forwards;
@@ -386,18 +347,13 @@ body {
     opacity: 0;
     transform: scale(0.1);
     -webkit-transform: scale(0.1);
-    stroke: $cGris;
   }
   60% ,100% {
     opacity: 1;
-    stroke: $cAzul;
     transform: scale(1);
     -webkit-transform: scale(1);
   }
 }
-
-
-
 
 
 .ripple-effect {
@@ -414,11 +370,8 @@ body {
 
 #circulo {
   background: #e66538;
-  position: absolute;
-  right: 80px;
-  bottom: 55px;
-  width: 50px;
-  height: 50px;
+  @include loc(auto,80px, 55px, auto);
+  @include size(50px , 50px);
   opacity: 0.1;
   border-radius: 100%;
   transform-origin: center center;
@@ -435,9 +388,8 @@ body {
 }
 
 #contact-form #close {
-  position: fixed;
-  right: 120px;
-  top: 120px;
+  @include loc(120px,120px, auto, auto, fixed);
+  @include size(50px , 50px);
   color: $cGris;
   font-size: 1.3em;
   font-family: "Roboto", sans-serif;

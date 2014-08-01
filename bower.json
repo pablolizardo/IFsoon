@@ -1,18 +1,18 @@
 {
   "name": "ifsoon",
-  "private": true,
+  "private": false,
   "dependencies": {
-    "svgeezy": "~1.0.0",
     "jquery": "~2.1.1",
     "animate.css": "~3.2.0",
-    "snap.svg": "~0.3.0"
+    "bootstrap": "~3.2.0",
+    "modernizr": "~2.8.3"
   },
   "version": "0.1",
   "homepage": "https://github.com/pablolizardo/IFsoon",
   "authors": [
-    "Pablo Lizardo <pablo_lizardo@yahoo.com.ar>"
+    "Pablo Lizardo"
   ],
-  "description": "IdeasFijas Soon",
+  "description": "ifsoon",
   "main": "app/index.html",
   "license": "MIT",
   "ignore": [

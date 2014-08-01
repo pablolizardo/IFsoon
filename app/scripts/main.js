@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    if (!Modernizr.svg) {
-      $(".logo img").attr("src", "images/logo.png");
-    }
+    //if (!Modernizr.svg) {
+      //$(".logo img").attr("src", "images/logo.png");
+    //}
 
 
     $('#contact-form').hide;
@@ -14,16 +14,16 @@ $(document).ready(function() {
 	$('#circulo').click(function(event) {
 		/* Stuff to do when the mouse enters the element */
         $('#contact-form').show;
-        $( '#circulo' ).animate({width: "8000px", height:"8000px", opacity:.94,right:"-4000px",bottom:"-4000px"}, 500);
+        $( '#circulo' ).animate({width: "8000px", height:"8000px", opacity:".94",right:"0px",bottom:"0px"}, 500);
     });
 
     $('#close').click(function() {
         $('#contact-form').hide;
 		$( '#circulo' ).animate({width: "50px", height:"50px", opacity:.1,right:"80px",bottom:"55px"}, 500);
     });
-    $('#lamparita').click(function() {
+    //$('#lamparita').click(function() {
            // $('body').css('-webkit-filter', 'invert(1)');
-        });
+      //  });
 
 
     // svg part
